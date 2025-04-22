@@ -81,7 +81,7 @@ function actualizarCarrito() {
             </div>
             <span class="subtotal">Bs. ${subtotal}</span>
             <button class="eliminar">
-                <img src="../imagenes/icons8-trash.svg" alt="Eliminar">
+                <img src="https://img.icons8.com/ios-filled/50/trash.png" alt="Eliminar">
             </button>
         `;
         contenedor.appendChild(div);
