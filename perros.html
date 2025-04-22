@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pet Shop/Seccion_Perros</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bigshot+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/nav.css">
+    <link rel="stylesheet" href="css/categorias_perros.css">
+    <link rel="stylesheet" href="css/carrito.css">
+</head>
+
+<body>
+    <div class="app-container">
+        <!-- Header -->
+        <header class="header">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="imagenes/Logo.png" alt="PetShop Logo">
+                </a>
+            </div>
+
+            <div class="search-bar">
+                <input type="text" placeholder="Buscar productos...">
+                <img src="imagenes/buscar.png" alt="Ícono de búsqueda" class="search-image">
+            </div>
+            <div class="actions">
+                <a href="inicio_sesion.html" class="login">
+                    <img src="imagenes/icons8-usuario-100.png" alt="Iniciar Sesión">
+                    <span>Iniciar sesión</span>
+                </a>
+                <div class="cart">
+                    <img src="imagenes/icons8-carrito-de-compras-100.png" alt="Carrito">
+                    <span class="cart-count">0</span>
+                </div>
+            </div>
+        </header>
+        <nav>
+            <div class="menu-container">
+                <div class="menu-button">≡</div>
+                <ul class="menu">
+                    <li>
+                        <a href="perros.html">Perros</a>
+                    </li>
+                    <li>
+                        <a href="gatos.html">Gatos</a>
+                    </li>
+                    <li>
+                        <a href="roedores.html">Roedores</a>
+                    </li>
+                    <li>
+                        <a href="aves.html">Aves</a>
+                    </li>
+                    <li>
+                        <a href="peces.html">Peces</a>
+                    </li>
+                </ul>
+            </div>
+            <ul>
+                <li class="categorias">
+                    <div class="menu-container1">
+                        <div class="menu-button">CATEGORÍAS</div>
+                        <ul class="menu">
+                            <li>
+                                <a href="perros.html">Perros</a>
+                            </li>
+                            <li>
+                                <a href="gatos.html">Gatos</a>
+                            </li>
+                            <li>
+                                <a href="roedores.html">Roedores</a>
+                            </li>
+                            <li>
+                                <a href="aves.html">Aves</a>
+                            </li>
+                            <li>
+                                <a href="peces.html">Peces</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="fondo-menu menu1"><a href="index.html">INICIO</a></li>
+                <li class="menu1"><a href="peros.html" class="active">PERROS</a></li>
+                <li class="menu1"><a href="gatos.html">GATOS</a></li>
+                <li class="menu1"><a href="roedores.html">ROEDORES</a></li>
+                <li class="menu1"><a href="aves.html">AVES</a></li>
+                <li class="menu1"><a href="peces.html">PECES</a></li>
+            </ul>
+        </nav>
+        <section class="content-grid">
+            <div class="category-header">
+                <h2 class="category-title">Sección para Perros</h2>
+            </div>
+            <div class="category-container">
+                <div class="category">
+                    <a href="alimentos_perros.html"> <!-- Enlace envuelve todo -->
+                        <div class="image-container">
+                            <img class="category-image default" src="imagenes/perro-alimento.jpg"
+                                alt="Alimento para perros">
+                            <img class="category-image hover" src="imagenes/Perro_Comida.jpg"
+                                alt="Alimento para perros Hover">
+                            <div class="overlay"></div> <!-- Sombreado -->
+                            <h3 class="category-title-hover">Alimentación Premium</h3>
+                            <p class="category-text-hover">¡Elige la mejor comida!</p>
+                        </div>
+                    </a>
+                    <p class="category-text">Alimentación</p>
+                </div>
+                <div class="category">
+                    <a href="farmacia_perros.html">
+                        <div class="image-container">
+                            <img class="category-image default" src="imagenes/perro-farmacia.jpg"
+                                alt="Farmacia para perros">
+                            <img class="category-image hover" src="imagenes/medicamento_perro.webp"
+                                alt="Farmacia para perros Hover">
+                            <div class="overlay"></div>
+                            <h3 class="category-title-hover">Farmacia Veterinaria</h3>
+                            <p class="category-text-hover">¡Cuida su salud!</p>
+                        </div>
+                    </a>
+                    <p class="category-text">Farmacia</p>
+                </div>
+                <div class="category">
+                    <a href="accesorios_perros.html">
+                        <div class="image-container">
+                            <img class="category-image default" src="imagenes/perro-correas.jpg"
+                                alt="Accesorios para perros">
+                            <img class="category-image hover" src="imagenes/61ixT5DxpDL.jpg"
+                                alt="Accesorios para perros Hover">
+                            <div class="overlay"></div>
+                            <h3 class="category-title-hover">Estilo Canino</h3>
+                            <p class="category-text-hover">¡El mejor estilo para tu perro!</p>
+                        </div>
+                    </a>
+                    <p class="category-text">Accesorios</p>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Footer -->
+        <footer class="parent">
+            <div class="div1">
+                <div class="info">
+                    <h3 class="footer-title">UBICACIÓN</h3>
+                    <div class="ubicaciones">
+                        <img src="imagenes/icons8-ubicación-24.png" alt="">
+                        <p>Av. Busch y Tercer Anillo </p>
+                    </div>
+                    <div class="ubicaciones">
+                        <img src="imagenes/icons8-ubicación-24.png" alt="">
+                        <p>Av. America esq. Av Pando </p>
+                    </div>
+                </div>
+            </div>
+            <div class="div2">
+                <div class="info">
+                    <h3 class="footer-title">CONTACTANOS</h3>
+                    <p>Atención Telefónica</p>
+                    <p>(591) 54488474</p>
+                </div>
+            </div>
+            <div class="div3">
+                <div class="info">
+                    <h3 class="footer-title ayuda-title">AYUDA</h3>
+                    <a href="preguntas_frecuentes.html">Preguntas frecuentes</a>
+                    <a href="terminos_condiciones.html">Términos y condiciones</a>
+                    <a href="politica_privacidad.html">Política de privacidad</a>
+                </div>
+            </div>
+            <div class="div4">
+                <p>SÍGUENOS EN:</p>
+                <div class="imagenes-redes-sociales">
+                    <a href="https://www.facebook.com/people/Pet-Shop-Huellitas/100063562781781/" target="_blank"
+                        rel="noopener noreferrer">
+                        <img src="imagenes/icons8-facebook-48.png" alt="facebook">
+                    </a>
+                    <a href="https://www.instagram.com/petshop_huellitas/" target="_blank" rel="noopener noreferrer">
+                        <img src="imagenes/icons8-instagram-48.png" alt="instagram">
+                    </a>
+                    <a href="https://www.tiktok.com/@petshophuellita?is_from_webapp=1&sender_device=pc" target="_blank"
+                        rel="noopener noreferrer">
+                        <img src="imagenes/icons8-tiktok-48.png" alt="tiktok">
+                    </a>
+                </div>
+            </div>
+            <div class="div5">
+                <p>© Pet Shop - 2025</p>
+            </div>
+        </footer>
+    </div>
+    <div class="cart-container">
+        <div class="cart-content">
+            <div class="cart-header">
+                <h2>Carrito de compras</h2>
+                <button class="close-cart">❌</button>
+            </div>
+            <div class="cart-items"></div>
+            <p class="total-price">Total: Bs. 0,00</p>
+
+            <div class="cart-actions">
+                <button class="vaciar-carrito">🗑 Vaciar Carrito</button>
+                <button class="finalizar-compra">🛒 Finalizar Compra</button>
+            </div>
+        </div>
+    </div>
+    <script src="js/main.js"></script>
+    <script src="js/nav.js"></script>
+    <script src="js/categoria_perros.js"></script>
+    <script src="js/carrito.js"></script>
+</body>
+
+</html>

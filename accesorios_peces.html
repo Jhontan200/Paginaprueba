@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pet Shop/Accesorios_para_Peces</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bigshot+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/nav.css">
+    <link rel="stylesheet" href="css/catalogo.css">
+    <link rel="stylesheet" href="css/carrito.css">
+</head>
+
+<body>
+    <div class="app-container">
+        <!-- Header -->
+        <header class="header">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="imagenes/Logo.png" alt="PetShop Logo">
+                </a>
+            </div>
+
+            <div class="search-bar">
+                <input type="text" placeholder="Buscar productos...">
+                <img src="imagenes/buscar.png" alt="Ícono de búsqueda" class="search-image">
+            </div>
+            <div class="actions">
+                <a href="inicio_sesion.html" class="login">
+                    <img src="imagenes/icons8-usuario-100.png" alt="Iniciar Sesión">
+                    <span>Iniciar sesión</span>
+                </a>
+                <div class="cart">
+                    <img src="imagenes/icons8-carrito-de-compras-100.png" alt="Carrito">
+                    <span class="cart-count">0</span>
+                </div>
+            </div>
+        </header>
+        <nav>
+            <div class="menu-container">
+                <div class="menu-button">≡</div>
+                <ul class="menu">
+                    <li>
+                        <a href="perros.html">Perros</a>
+                    </li>
+                    <li>
+                        <a href="gatos.html">Gatos</a>
+                    </li>
+                    <li>
+                        <a href="roedores.html">Roedores</a>
+                    </li>
+                    <li>
+                        <a href="aves.html">Aves</a>
+                    </li>
+                    <li>
+                        <a href="peces.html">Peces</a>
+                    </li>
+                </ul>
+            </div>
+            <ul>
+                <li class="categorias">
+                    <div class="menu-container1">
+                        <div class="menu-button">CATEGORÍAS</div>
+                        <ul class="menu">
+                            <li>
+                                <a href="perros.html">Perros</a>
+                            </li>
+                            <li>
+                                <a href="gatos.html">Gatos</a>
+                            </li>
+                            <li>
+                                <a href="roedores.html">Roedores</a>
+                            </li>
+                            <li>
+                                <a href="aves.html">Aves</a>
+                            </li>
+                            <li>
+                                <a href="peces.html">Peces</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="fondo-menu menu1"><a href="index.html">INICIO</a></li>
+                <li class="menu1"><a href="perros.html">PERROS</a></li>
+                <li class="menu1"><a href="gatos.html">GATOS</a></li>
+                <li class="menu1"><a href="roedores.html">ROEDORES</a></li>
+                <li class="menu1"><a href="aves.html">AVES</a></li>
+                <li class="menu1"><a href="peces.html">PECES</a></li>
+            </ul>
+        </nav>
+        <section class="contenido">
+
+            <!-- Indicador de ubicación (Breadcrumb) -->
+            <div class="breadcrumb">
+                <a href="index.html">Inicio</a> /
+                <a href="peces.html">Peces</a> /
+                <span class="activo">Accesorios</span>
+            </div>
+
+            <!-- Título de la categoría -->
+            <h1 class="titulo-categoria">Accesorios para Peces</h1>
+            <!-- Botón para abrir filtros en pantallas pequeñas -->
+            <button class="boton-filtros">Filtros</button>
+
+
+            <!-- Aquí comienza el contenido que incluye filtros y catálogo -->
+            <div class="contenedor">
+                <!-- Filtros -->
+                <aside class="filtros">
+                    <button class="cerrar-filtros">✖</button>
+
+                    <!-- Sub-Categoría -->
+                    <h3 class="toggle" onclick="toggleSection(this)">Sub-Categoría <span class="icon">▼</span></h3>
+                    <div class="filter-content">
+                        <label><input type="checkbox" class="filtro" value="Accesorios"> Accesorios</label><br>
+                        <label><input type="checkbox" class="filtro" value="Tecnologia"> Tecnología</label><br>
+                    </div>
+
+                    <!-- Botones adicionales -->
+                    <button class="limpiar-filtros">Eliminar selección</button>
+                    <button class="aplicar-filtros">Aplicar</button>
+                </aside>
+
+
+                <!-- Catálogo -->
+                <section class="catalogo">
+                    <div class="producto" data-categoria="Tecnologia" data-precio="255.00">
+                        <img src="imagenes/imagenes_accesorios_peces/AccesorioPe1_Laguna_Bomba_Max_Flo_Sumergible_600-2200.jpg"
+                            alt="Laguna Bomba Max Flo Sumergible 600/2200">
+                        <h3>Laguna Bomba Max Flo Sumergible 600/2200</h3>
+                        <p>Bs. 255,00</p>
+                        <div class="cantidad">
+                            <button class="decrementar" data-index="0">-</button>
+                            <input type="text" class="cantidad-input" data-index="0" value="1" readonly>
+                            <button class="incrementar" data-index="0">+</button>
+                        </div>
+                        <button class="agregar">AGREGAR</button>
+                    </div>
+
+                    <div class="producto2" data-categoria="Accesorios" data-precio="230.50">
+                        <img src="imagenes/imagenes_accesorios_peces/AccesorioPe2_Sera_Siporax_Pond_Algenstop_Professional.png"
+                            alt="Sera Siporax Pond Algenstop Professional">
+                        <h3>Sera Siporax Pond Algenstop Professional</h3>
+                        <p>Bs. 230,50</p>
+                        <div class="cantidad">
+                            <button class="decrementar" data-index="1">-</button>
+                            <input type="text" class="cantidad-input" data-index="1" value="1" readonly>
+                            <button class="incrementar" data-index="1">+</button>
+                        </div>
+                        <button class="agregar">AGREGAR</button>
+                    </div>
+
+                    <div class="producto3" data-categoria="Accesorios" data-precio="15.00">
+                        <img src="imagenes/imagenes_accesorios_peces/AccesorioPe3_Marina_Red_de_Malla_Fina_Blanca_para_Acuarios.jpg"
+                            alt="Marina Red de Malla Fina Blanca para Acuarios">
+                        <h3>Marina Red de Malla Fina Blanca para Acuarios</h3>
+                        <p>Bs. 15,00</p>
+                        <div class="cantidad">
+                            <button class="decrementar" data-index="2">-</button>
+                            <input type="text" class="cantidad-input" data-index="2" value="1" readonly>
+                            <button class="incrementar" data-index="2">+</button>
+                        </div>
+                        <button class="agregar">AGREGAR</button>
+                    </div>
+
+                    <div class="producto2" data-categoria="Tecnologia" data-precio="410.20">
+                        <img src="imagenes/imagenes_accesorios_peces/AccesorioPe4_Croci_Comedero_Aut_Deluxe_Lcd.jpeg"
+                            alt="Croci Comedero Aut Deluxe Lcd">
+                        <h3>Croci Comedero Aut Deluxe Lcd</h3>
+                        <p>Bs. 410,20</p>
+                        <div class="cantidad">
+                            <button class="decrementar" data-index="3">-</button>
+                            <input type="text" class="cantidad-input" data-index="3" value="1" readonly>
+                            <button class="incrementar" data-index="3">+</button>
+                        </div>
+                        <button class="agregar">AGREGAR</button>
+                    </div>
+
+                    <div class="producto2" data-categoria="Tecnologia" data-precio="255.50">
+                        <img src="imagenes/imagenes_accesorios_peces/AccesorioPe5_Eheim_Display_5_Comedero_Automatico.jpg"
+                            alt="Eheim Display 5 Comedero Automático">
+                        <h3>Eheim Display 5 Comedero Automático</h3>
+                        <p>Bs. 255,50</p>
+                        <div class="cantidad">
+                            <button class="decrementar" data-index="4">-</button>
+                            <input type="text" class="cantidad-input" data-index="4" value="1" readonly>
+                            <button class="incrementar" data-index="4">+</button>
+                        </div>
+                        <button class="agregar">AGREGAR</button>
+                    </div>
+
+                    <div class="producto3" data-categoria="Tecnologia" data-precio="280.50">
+                        <img src="imagenes/imagenes_accesorios_peces/AccesorioPe6_Fluval_PF2_Alimentador_Programable_para_Peces.jpeg"
+                            alt="Fluval PF2 Alimentador Programable para Peces">
+                        <h3>Fluval PF2 Alimentador Programable para Peces</h3>
+                        <p>Bs. 280,50</p>
+                        <div class="cantidad">
+                            <button class="decrementar" data-index="5">-</button>
+                            <input type="text" class="cantidad-input" data-index="5" value="1" readonly>
+                            <button class="incrementar" data-index="5">+</button>
+                        </div>
+                        <button class="agregar">AGREGAR</button>
+                    </div>
+
+                    <div class="producto2" data-categoria="Tecnologia" data-precio="195.00">
+                        <img src="imagenes/imagenes_accesorios_peces/AccesorioPe7_Sandimas_Mini_Calentador_Acuario.jpeg"
+                            alt="Sandimas Mini Calentador Acuario">
+                        <h3>Sandimas Mini Calentador Acuario</h3>
+                        <p>Bs. 195,00</p>
+                        <div class="cantidad">
+                            <button class="decrementar" data-index="6">-</button>
+                            <input type="text" class="cantidad-input" data-index="6" value="1" readonly>
+                            <button class="incrementar" data-index="6">+</button>
+                        </div>
+                        <button class="agregar">AGREGAR</button>
+                    </div>
+
+                    <div class="producto" data-categoria="Tecnologia" data-precio="80.40">
+                        <img src="imagenes/imagenes_accesorios_peces/AccesorioPe8_Sera_Termocalentadores_para_Acuario.png"
+                            alt="Sera Termocalentadores para Acuario">
+                        <h3>Sera Termocalentadores para Acuario</h3>
+                        <p>Bs. 80,40</p>
+                        <div class="cantidad">
+                            <button class="decrementar" data-index="7">-</button>
+                            <input type="text" class="cantidad-input" data-index="7" value="1" readonly>
+                            <button class="incrementar" data-index="7">+</button>
+                        </div>
+                        <button class="agregar">AGREGAR</button>
+                    </div>
+
+                    <div class="producto2" data-categoria="Accesorios" data-precio="57.10">
+                        <img src="imagenes/imagenes_accesorios_peces/AccesorioPe9_Freedog_Fish_Tank.jpg"
+                            alt="Freedog Fish Tank">
+                        <h3>Freedog Fish Tank (Pecera)</h3>
+                        <p>Bs. 57,10</p>
+                        <div class="cantidad">
+                            <button class="decrementar" data-index="8">-</button>
+                            <input type="text" class="cantidad-input" data-index="8" value="1" readonly>
+                            <button class="incrementar" data-index="8">+</button>
+                        </div>
+                        <button class="agregar">AGREGAR</button>
+                    </div>
+
+                    <div class="producto2" data-categoria="Accesorios" data-precio="65.00">
+                        <img src="imagenes/imagenes_accesorios_peces/AccesorioPe10_Sera_Contenedor_De_Cria.png"
+                            alt="Sera Contenedor De Cría">
+                        <h3>Sera Contenedor De Cría</h3>
+                        <p>Bs. 65,00</p>
+                        <div class="cantidad">
+                            <button class="decrementar" data-index="9">-</button>
+                            <input type="text" class="cantidad-input" data-index="9" value="1" readonly>
+                            <button class="incrementar" data-index="9">+</button>
+                        </div>
+                        <button class="agregar">AGREGAR</button>
+                    </div>
+
+
+                </section>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="parent">
+            <div class="div1">
+                <div class="info">
+                    <h3 class="footer-title">UBICACIÓN</h3>
+                    <div class="ubicaciones">
+                        <img src="imagenes/icons8-ubicación-24.png" alt="">
+                        <p>Av. Busch y Tercer Anillo </p>
+                    </div>
+                    <div class="ubicaciones">
+                        <img src="imagenes/icons8-ubicación-24.png" alt="">
+                        <p>Av. America esq. Av Pando </p>
+                    </div>
+                </div>
+            </div>
+            <div class="div2">
+                <div class="info">
+                    <h3 class="footer-title">CONTACTANOS</h3>
+                    <p>Atención Telefónica</p>
+                    <p>(591) 54488474</p>
+                </div>
+            </div>
+            <div class="div3">
+                <div class="info">
+                    <h3 class="footer-title ayuda-title">AYUDA</h3>
+                    <a href="preguntas_frecuentes.html">Preguntas frecuentes</a>
+                    <a href="terminos_condiciones.html">Términos y condiciones</a>
+                    <a href="politica_privacidad.html">Política de privacidad</a>
+                </div>
+            </div>
+            <div class="div4">
+                <p>SÍGUENOS EN:</p>
+                <div class="imagenes-redes-sociales">
+                    <a href="https://www.facebook.com/people/Pet-Shop-Huellitas/100063562781781/" target="_blank"
+                        rel="noopener noreferrer">
+                        <img src="imagenes/icons8-facebook-48.png" alt="facebook">
+                    </a>
+                    <a href="https://www.instagram.com/petshop_huellitas/" target="_blank" rel="noopener noreferrer">
+                        <img src="imagenes/icons8-instagram-48.png" alt="instagram">
+                    </a>
+                    <a href="https://www.tiktok.com/@petshophuellita?is_from_webapp=1&sender_device=pc" target="_blank"
+                        rel="noopener noreferrer">
+                        <img src="imagenes/icons8-tiktok-48.png" alt="tiktok">
+                    </a>
+                </div>
+            </div>
+            <div class="div5">
+                <p>© Pet Shop - 2025</p>
+            </div>
+        </footer>
+    </div>
+    <div class="cart-container">
+        <div class="cart-content">
+            <div class="cart-header">
+                <h2>Carrito de compras</h2>
+                <button class="close-cart">❌</button>
+            </div>
+            <div class="cart-items"></div>
+            <p class="total-price">Total: Bs. 0,00</p>
+
+            <div class="cart-actions">
+                <button class="vaciar-carrito">🗑 Vaciar Carrito</button>
+                <button class="finalizar-compra">🛒 Finalizar Compra</button>
+            </div>
+        </div>
+    </div>
+    <script src="js/main.js"></script>
+    <script src="js/nav.js"></script>
+    <script src="js/catalogo.js"></script>
+    <script src="js/carrito.js"></script>
+</body>
+
+</html>

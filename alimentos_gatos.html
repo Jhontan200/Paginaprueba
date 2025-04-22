@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pet Shop/Alimentos_para_Gatos</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bigshot+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/nav.css">
+    <link rel="stylesheet" href="css/catalogo.css">
+    <link rel="stylesheet" href="css/carrito.css">
+</head>
+
+<body>
+    <div class="app-container">
+        <!-- Header -->
+        <header class="header">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="imagenes/Logo.png" alt="PetShop Logo">
+                </a>
+            </div>
+
+            <div class="search-bar">
+                <input type="text" placeholder="Buscar productos...">
+                <img src="imagenes/buscar.png" alt="Ícono de búsqueda" class="search-image">
+            </div>
+            <div class="actions">
+                <a href="inicio_sesion.html" class="login">
+                    <img src="imagenes/icons8-usuario-100.png" alt="Iniciar Sesión">
+                    <span>Iniciar sesión</span>
+                </a>
+                <div class="cart">
+                    <img src="imagenes/icons8-carrito-de-compras-100.png" alt="Carrito">
+                    <span class="cart-count">0</span>
+                </div>
+            </div>
+        </header>
+        <nav>
+            <div class="menu-container">
+                <div class="menu-button">≡</div>
+                <ul class="menu">
+                    <li>
+                        <a href="perros.html">Perros</a>
+                    </li>
+                    <li>
+                        <a href="gatos.html">Gatos</a>
+                    </li>
+                    <li>
+                        <a href="roedores.html">Roedores</a>
+                    </li>
+                    <li>
+                        <a href="aves.html">Aves</a>
+                    </li>
+                    <li>
+                        <a href="peces.html">Peces</a>
+                    </li>
+                </ul>
+            </div>
+            <ul>
+                <li class="categorias">
+                    <div class="menu-container1">
+                        <div class="menu-button">CATEGORÍAS</div>
+                        <ul class="menu">
+                            <li>
+                                <a href="perros.html">Perros</a>
+                            </li>
+                            <li>
+                                <a href="gatos.html">Gatos</a>
+                            </li>
+                            <li>
+                                <a href="roedores.html">Roedores</a>
+                            </li>
+                            <li>
+                                <a href="aves.html">Aves</a>
+                            </li>
+                            <li>
+                                <a href="peces.html">Peces</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="fondo-menu menu1"><a href="index.html">INICIO</a></li>
+                <li class="menu1"><a href="perros.html">PERROS</a></li>
+                <li class="menu1"><a href="gatos.html">GATOS</a></li>
+                <li class="menu1"><a href="roedores.html">ROEDORES</a></li>
+                <li class="menu1"><a href="aves.html">AVES</a></li>
+                <li class="menu1"><a href="peces.html">PECES</a></li>
+            </ul>
+        </nav>
+        <section class="contenido">
+
+            <!-- Indicador de ubicación (Breadcrumb) -->
+            <div class="breadcrumb">
+                <a href="index.html">Inicio</a> /
+                <a href="gatos.html">Gatos</a> /
+                <span class="activo">Alimentos</span>
+            </div>
+
+            <!-- Título de la categoría -->
+            <h1 class="titulo-categoria">Alimentos para Gatos</h1>
+            <!-- Botón para abrir filtros en pantallas pequeñas -->
+            <button class="boton-filtros">Filtros</button>
+
+
+            <!-- Aquí comienza el contenido que incluye filtros y catálogo -->
+            <div class="contenedor">
+                <!-- Filtros -->
+                <aside class="filtros">
+                    <button class="cerrar-filtros">✖</button>
+
+                    <!-- Sub-Categoría -->
+                    <h3 class="toggle" onclick="toggleSection(this)">Sub-Categoría <span class="icon">▼</span></h3>
+                    <div class="filter-content">
+                        <label><input type="checkbox" class="filtro" value="Alimentos"> Alimentos Secos</label><br>
+                        <label><input type="checkbox" class="filtro" value="Lata"> Latas</label><br>
+                    </div>
+
+                    <!-- Filtrar por Peso -->
+                    <h3 class="toggle" onclick="toggleSection(this)">Filtrar por Peso <span class="icon">▼</span></h3>
+                    <div class="filter-content">
+                        <label><input type="checkbox" class="filtro" value="340_gr"> 340 gr</label><br>
+                        <label><input type="checkbox" class="filtro" value="2_kg"> 2 kg</label><br>
+                        <label><input type="checkbox" class="filtro" value="3_kg"> 3 kg</label><br>
+                        <label><input type="checkbox" class="filtro" value="7.5_kg"> 7,5 kg</label><br>
+                        <label><input type="checkbox" class="filtro" value="8_kg"> 8 kg</label><br>
+                        <label><input type="checkbox" class="filtro" value="10_kg"> 10 kg</label><br>
+                        <label><input type="checkbox" class="filtro" value="15_kg"> 15 kg</label><br>
+                    </div>
+
+                    <!-- Filtrar por Marca -->
+                    <h3 class="toggle" onclick="toggleSection(this)">Filtrar por Marca <span class="icon">▼</span></h3>
+                    <div class="filter-content">
+                        <label><input type="checkbox" class="filtro" value="Complete"> Complete</label><br>
+                        <label><input type="checkbox" class="filtro" value="Hop"> Hop</label><br>
+                        <label><input type="checkbox" class="filtro" value="Balanced"> Balanced</label><br>
+                        <label><input type="checkbox" class="filtro" value="Premium"> Premium</label><br>
+                        <label><input type="checkbox" class="filtro" value="Excellent"> Excellent</label><br>
+                        <label><input type="checkbox" class="filtro" value="Agility"> Agility</label><br>
+                        <label><input type="checkbox" class="filtro" value="Cat_Chow"> Cat Chow</label><br>
+                        <label><input type="checkbox" class="filtro" value="Nutrique"> Nutrique</label><br>
+                        <label><input type="checkbox" class="filtro" value="Royal_Canin"> Royal Canin</label><br>
+                        <label><input type="checkbox" class="filtro" value="Whiskas"> Whiskas</label><br>
+                    </div>
+
+                    <!-- Filtrar por Edad -->
+                    <h3 class="toggle" onclick="toggleSection(this)">Filtrar por Edad <span class="icon">▼</span></h3>
+                    <div class="filter-content">
+                        <label><input type="checkbox" class="filtro" value="Cachorro"> Cachorro</label><br>
+                        <label><input type="checkbox" class="filtro" value="Adulto"> Adulto</label><br>
+                    </div>
+
+                    <!-- Botones adicionales -->
+                    <button class="limpiar-filtros">Eliminar selección</button>
+                    <button class="aplicar-filtros">Aplicar</button>
+                </aside>
+
+
+                <!-- Catálogo -->
+                <section class="catalogo">
+                    <div class="producto" data-categoria="Alimentos" data-peso="3_kg" data-marca="Excellent"
+                        data-edad="Adulto" data-precio="255.00">
+                        <img src="imagenes/imagenes_alimentos_gatos/SecoG1_Excellent_Gato_Adulto_Pollo_y_Arroz_3kg.webp"
+                            alt="Excellent Gato Adulto Pollo y Arroz 3 kg">
+                        <h3>Excellent Gato Adulto Pollo y Arroz 3 kg</h3>
+                        <p>Bs. 255,00</p>
+                        <div class="cantidad">
+                            <button class="decrementar" data-index="0">-</button>
+                            <input type="text" class="cantidad-input" data-index="0" value="1" readonly>
+                            <button class="incrementar" data-index="0">+</button>
+                        </div>
+                        <button class="agregar">AGREGAR</button>
+                    </div>
+
+                    <div class="producto5" data-categoria="Alimentos" data-peso="7.5_kg" data-marca="Hop"
+                        data-edad="Cachorro" data-precio="350.00">
+                        <img src="imagenes/imagenes_alimentos_gatos/SecoG2_Hop_Gato_Kitten_75kg.webp"
+                            alt="Hop Gato Kitten 7,5 kg">
+                        <h3>Hop Gato Kitten 7,5 kg</h3>
+                        <p>Bs. 350,00</p>
+                        <div class="cantidad">
+                            <button class="decrementar" data-index="1">-</button>
+                            <input type="text" class="cantidad-input" data-index="1" value="1" readonly>
+                            <button class="incrementar" data-index="1">+</button>
+                        </div>
+                        <button class="agregar">AGREGAR</button>
+                    </div>
+
+                    <div class="producto" data-categoria="Alimentos" data-marca="Premium" data-peso="7.5_kg"
+                        data-edad="Adulto" data-precio="255.50">
+                        <img src="imagenes/imagenes_alimentos_gatos/SecoG3_Premium_Gato_Adulto_75kg.webp"
+                            alt="Premium Gato Adulto 7,5 kg">
+                        <h3>Premium Gato Adulto 7,5 kg</h3>
+                        <p>Bs. 255,50</p>
+                        <div class="cantidad">
+                            <button class="decrementar" data-index="2">-</button>
+                            <input type="text" class="cantidad-input" data-index="2" value="1" readonly>
+                            <button class="incrementar" data-index="2">+</button>
+                        </div>
+                        <button class="agregar">AGREGAR</button>
+                    </div>
+
+                    <div class="producto" data-categoria="Alimentos" data-marca="Complete" data-peso="15_kg"
+                        data-edad="Adulto" data-precio="210.20">
+                        <img src="imagenes/imagenes_alimentos_gatos/SecoG4_Complete_Gato_Adulto_15kg.webp"
+                            alt="Complete Gato Adulto 15 kg">
+                        <h3>Complete Gato Adulto 15 kg</h3>
+                        <p>Bs. 210,20</p>
+                        <div class="cantidad">
+                            <button class="decrementar" data-index="3">-</button>
+                            <input type="text" class="cantidad-input" data-index="3" value="1" readonly>
+                            <button class="incrementar" data-index="3">+</button>
+                        </div>
+                        <button class="agregar">AGREGAR</button>
+                    </div>
+
+                    <div class="producto" data-categoria="Alimentos" data-marca="Agility" data-peso="10_kg"
+                        data-edad="Adulto" data-precio="255.50">
+                        <img src="imagenes/imagenes_alimentos_gatos/SecoG5_Agility_Gato_Adulto_10kg.webp"
+                            alt="Agility Gato Adulto 10 kg">
+                        <h3>Agility Gato Adulto 10 kg</h3>
+                        <p>Bs. 255,50</p>
+                        <div class="cantidad">
+                            <button class="decrementar" data-index="4">-</button>
+                            <input type="text" class="cantidad-input" data-index="4" value="1" readonly>
+                            <button class="incrementar" data-index="4">+</button>
+                        </div>
+                        <button class="agregar">AGREGAR</button>
+                    </div>
+
+                    <div class="producto" data-categoria="Alimentos" data-marca="Royal_Canin" data-peso="15_kg"
+                        data-edad="Cachorro" data-precio="355.75">
+                        <img src="imagenes/imagenes_alimentos_gatos/SecoG6_Royal_Canin_Gato_Kitten_15kg.webp"
+                            alt="Royal Canin Gato Kitten 15 kg">
+                        <h3>Royal Canin Gato Kitten 15 kg</h3>
+                        <p>Bs. 355,75</p>
+                        <div class="cantidad">
+                            <button class="decrementar" data-index="5">-</button>
+                            <input type="text" class="cantidad-input" data-index="5" value="1" readonly>
+                            <button class="incrementar" data-index="5">+</button>
+                        </div>
+                        <button class="agregar">AGREGAR</button>
+                    </div>
+
+                    <div class="producto" data-categoria="Alimentos" data-marca="Balanced" data-peso="2_kg"
+                        data-edad="Cachorro" data-precio="285.00">
+                        <img src="imagenes/imagenes_alimentos_gatos/SecoG7_Balanced_Gato_Kitten_2kg.webp"
+                            alt="Balanced Gato Kitten 2 kg">
+                        <h3>Balanced Gato Kitten 2 kg</h3>
+                        <p>Bs. 285,00</p>
+                        <div class="cantidad">
+                            <button class="decrementar" data-index="6">-</button>
+                            <input type="text" class="cantidad-input" data-index="6" value="1" readonly>
+                            <button class="incrementar" data-index="6">+</button>
+                        </div>
+                        <button class="agregar">AGREGAR</button>
+                    </div>
+
+                    <div class="producto" data-categoria="Alimentos" data-marca="Cat_Chow" data-peso="8_kg"
+                        data-edad="Adulto" data-precio="150.40">
+                        <img src="imagenes/imagenes_alimentos_gatos/SecoG8_Cat_Chow_Adultos_Carne_y_Pollo_8kg.webp"
+                            alt="Cat Chow Adultos Carne y Pollo 8 kg">
+                        <h3>Cat Chow Adultos Carne y Pollo 8 kg</h3>
+                        <p>Bs. 150,40</p>
+                        <div class="cantidad">
+                            <button class="decrementar" data-index="7">-</button>
+                            <input type="text" class="cantidad-input" data-index="7" value="1" readonly>
+                            <button class="incrementar" data-index="7">+</button>
+                        </div>
+                        <button class="agregar">AGREGAR</button>
+                    </div>
+
+                    <div class="producto1" data-categoria="Alimentos" data-marca="Nutrique" data-peso="2_kg"
+                        data-edad="Adulto" data-precio="255.10">
+                        <img src="imagenes/imagenes_alimentos_gatos/SecoG9_Nutrique_Gato_Senior_Adulto_7_Anios_Mantenimiento_2kg.webp"
+                            alt="Nutrique Gato Senior Adulto 7 Años Mantenimiento 2 kg">
+                        <h3>Nutrique Gato Senior Adulto 7 Años Mantenimiento 2 kg</h3>
+                        <p>Bs. 255,10</p>
+                        <div class="cantidad">
+                            <button class="decrementar" data-index="8">-</button>
+                            <input type="text" class="cantidad-input" data-index="8" value="1" readonly>
+                            <button class="incrementar" data-index="8">+</button>
+                        </div>
+                        <button class="agregar">AGREGAR</button>
+                    </div>
+
+                    <div class="producto6" data-categoria="Alimentos" data-marca="Balanced" data-peso="15_kg"
+                        data-edad="Adulto" data-precio="355.00">
+                        <img src="imagenes/imagenes_alimentos_gatos/SecoG10_BalancedNatural_Recipe_Gato_Adulto_Cordero_15kg.webp"
+                            alt="Balanced Natural Recipe Gato Adulto Cordero 15 kg">
+                        <h3>Balanced Natural Recipe Gato Adulto Cordero 15 kg</h3>
+                        <p>Bs. 355,00</p>
+                        <div class="cantidad">
+                            <button class="decrementar" data-index="9">-</button>
+                            <input type="text" class="cantidad-input" data-index="9" value="1" readonly>
+                            <button class="incrementar" data-index="9">+</button>
+                        </div>
+                        <button class="agregar">AGREGAR</button>
+                    </div>
+
+                    <div class="producto" data-categoria="Lata" data-marca="Agility" data-peso="340_gr"
+                        data-edad="Adulto" data-precio="55.10">
+                        <img src="imagenes/imagenes_alimentos_gatos/LataG1_Lata_Agility_Gato_Sabor_Merluza_340gr.webp"
+                            alt="Lata Agility Gato Sabor Merluza 340gr">
+                        <h3>Lata Agility Gato Sabor Merluza 340gr</h3>
+                        <p>Bs. 55,10</p>
+                        <div class="cantidad">
+                            <button class="decrementar" data-index="10">-</button>
+                            <input type="text" class="cantidad-input" data-index="10" value="1" readonly>
+                            <button class="incrementar" data-index="10">+</button>
+                        </div>
+                        <button class="agregar">AGREGAR</button>
+                    </div>
+
+                    <div class="producto" data-categoria="Lata" data-marca="Agility" data-peso="340_gr"
+                        data-edad="Adulto" data-precio="85.00">
+                        <img src="imagenes/imagenes_alimentos_gatos/LataG2_Lata_Agility_Gato_Pollo_340gr.webp"
+                            alt="Lata Agility Gato Pollo 340 gr">
+                        <h3>Lata Agility Gato Pollo 340 gr</h3>
+                        <p>Bs. 85,00</p>
+                        <div class="cantidad">
+                            <button class="decrementar" data-index="11">-</button>
+                            <input type="text" class="cantidad-input" data-index="11" value="1" readonly>
+                            <button class="incrementar" data-index="11">+</button>
+                        </div>
+                        <button class="agregar">AGREGAR</button>
+                    </div>
+
+                    <div class="producto2" data-categoria="Lata" data-marca="Agility" data-peso="340_gr"
+                        data-edad="Adulto" data-precio="45.00">
+                        <img src="imagenes/imagenes_alimentos_gatos/LataG3_Lata_Agility_Gato_Sabor_Carne_340gr.webp"
+                            alt="Lata Agility Gato Sabor Carne 340 gr">
+                        <h3>Lata Agility Gato Sabor Carne 340 gr</h3>
+                        <p>Bs. 45,00</p>
+                        <div class="cantidad">
+                            <button class="decrementar" data-index="12">-</button>
+                            <input type="text" class="cantidad-input" data-index="12" value="1" readonly>
+                            <button class="incrementar" data-index="12">+</button>
+                        </div>
+                        <button class="agregar">AGREGAR</button>
+                    </div>
+
+                    <div class="producto" data-categoria="Lata" data-marca="Agility" data-peso="340_gr"
+                        data-edad="Cachorro" data-precio="45.00">
+                        <img src="imagenes/imagenes_alimentos_gatos/LataG4_Lata_Agility_Gato_Kitten_340grs.webp"
+                            alt="Lata Agility Gato Kitten 340 gr">
+                        <h3>Lata Agility Gato Kitten 340 gr</h3>
+                        <p>Bs. 45,00</p>
+                        <div class="cantidad">
+                            <button class="decrementar" data-index="13">-</button>
+                            <input type="text" class="cantidad-input" data-index="13" value="1" readonly>
+                            <button class="incrementar" data-index="13">+</button>
+                        </div>
+                        <button class="agregar">AGREGAR</button>
+                    </div>
+
+                    <div class="producto" data-categoria="Lata" data-marca="Whiskas" data-peso="340_gr"
+                        data-edad="Adulto" data-precio="55.00">
+                        <img src="imagenes/imagenes_alimentos_gatos/LataG5_Lata_Whiskas_Sabor_Carne_340gr.webp"
+                            alt="Lata Whiskas Sabor Carne 340 gr">
+                        <h3>Lata Whiskas Sabor Carne 340 gr</h3>
+                        <p>Bs. 55,00</p>
+                        <div class="cantidad">
+                            <button class="decrementar" data-index="14">-</button>
+                            <input type="text" class="cantidad-input" data-index="14" value="1" readonly>
+                            <button class="incrementar" data-index="14">+</button>
+                        </div>
+                        <button class="agregar">AGREGAR</button>
+                    </div>
+
+                    <div class="producto" data-categoria="Lata" data-marca="Whiskas" data-peso="340_gr"
+                        data-edad="Cachorro" data-precio="65.00">
+                        <img src="imagenes/imagenes_alimentos_gatos/LataG6_Lata_Whiskas_Gatito_340gr.webp"
+                            alt="Lata Whiskas Gatito 340 gr">
+                        <h3>Lata Whiskas Gatito 340 gr</h3>
+                        <p>Bs. 65,00</p>
+                        <div class="cantidad">
+                            <button class="decrementar" data-index="15">-</button>
+                            <input type="text" class="cantidad-input" data-index="15" value="1" readonly>
+                            <button class="incrementar" data-index="15">+</button>
+                        </div>
+                        <button class="agregar">AGREGAR</button>
+                    </div>
+
+                    <div class="producto" data-categoria="Lata" data-marca="Whiskas" data-peso="340_gr"
+                        data-edad="Adulto" data-precio="50.00">
+                        <img src="imagenes/imagenes_alimentos_gatos/LataG7_Lata_Whiskas_Gato_Sabor_Pollo_340gr.webp"
+                            alt="Lata Whiskas Gato Sabor Pollo 340 gr">
+                        <h3>Lata Whiskas Gato Sabor Pollo 340 gr</h3>
+                        <p>Bs. 50,00</p>
+                        <div class="cantidad">
+                            <button class="decrementar" data-index="16">-</button>
+                            <input type="text" class="cantidad-input" data-index="16" value="1" readonly>
+                            <button class="incrementar" data-index="16">+</button>
+                        </div>
+                        <button class="agregar">AGREGAR</button>
+                    </div>
+
+                </section>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="parent">
+            <div class="div1">
+                <div class="info">
+                    <h3 class="footer-title">UBICACIÓN</h3>
+                    <div class="ubicaciones">
+                        <img src="imagenes/icons8-ubicación-24.png" alt="">
+                        <p>Av. Busch y Tercer Anillo </p>
+                    </div>
+                    <div class="ubicaciones">
+                        <img src="imagenes/icons8-ubicación-24.png" alt="">
+                        <p>Av. America esq. Av Pando </p>
+                    </div>
+                </div>
+            </div>
+            <div class="div2">
+                <div class="info">
+                    <h3 class="footer-title">CONTACTANOS</h3>
+                    <p>Atención Telefónica</p>
+                    <p>(591) 54488474</p>
+                </div>
+            </div>
+            <div class="div3">
+                <div class="info">
+                    <h3 class="footer-title ayuda-title">AYUDA</h3>
+                    <a href="preguntas_frecuentes.html">Preguntas frecuentes</a>
+                    <a href="terminos_condiciones.html">Términos y condiciones</a>
+                    <a href="politica_privacidad.html">Política de privacidad</a>
+                </div>
+            </div>
+            <div class="div4">
+                <p>SÍGUENOS EN:</p>
+                <div class="imagenes-redes-sociales">
+                    <a href="https://www.facebook.com/people/Pet-Shop-Huellitas/100063562781781/" target="_blank"
+                        rel="noopener noreferrer">
+                        <img src="imagenes/icons8-facebook-48.png" alt="facebook">
+                    </a>
+                    <a href="https://www.instagram.com/petshop_huellitas/" target="_blank" rel="noopener noreferrer">
+                        <img src="imagenes/icons8-instagram-48.png" alt="instagram">
+                    </a>
+                    <a href="https://www.tiktok.com/@petshophuellita?is_from_webapp=1&sender_device=pc" target="_blank"
+                        rel="noopener noreferrer">
+                        <img src="imagenes/icons8-tiktok-48.png" alt="tiktok">
+                    </a>
+                </div>
+            </div>
+            <div class="div5">
+                <p>© Pet Shop - 2025</p>
+            </div>
+        </footer>
+    </div>
+    <div class="cart-container">
+        <div class="cart-content">
+            <div class="cart-header">
+                <h2>Carrito de compras</h2>
+                <button class="close-cart">❌</button>
+            </div>
+            <div class="cart-items"></div>
+            <p class="total-price">Total: Bs. 0,00</p>
+
+            <div class="cart-actions">
+                <button class="vaciar-carrito">🗑 Vaciar Carrito</button>
+                <button class="finalizar-compra">🛒 Finalizar Compra</button>
+            </div>
+        </div>
+    </div>
+    <script src="js/main.js"></script>
+    <script src="js/nav.js"></script>
+    <script src="js/catalogo.js"></script>
+    <script src="js/carrito.js"></script>
+</body>
+
+</html>
