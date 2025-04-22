@@ -286,7 +286,7 @@
     .cart-items {
         flex-grow: 1;
         overflow-y: auto;
-        max-height: 150px;
+        max-height: 350px;
         padding: 10px;
         display: flex;
         flex-direction: column;
