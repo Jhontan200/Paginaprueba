@@ -309,7 +309,7 @@ footer {
 /* Responsive para móviles */
 @media (max-width: 480px) {
     .cerrar {
-        top: 115px !important;
+        top: 100px !important;
         right: 10px;
         font-size: 45px !important;
     }
