@@ -139,7 +139,7 @@ document.querySelector(".vaciar-carrito").addEventListener("click", () => {
 // 🚀 Finalizar compra (vaciar carrito y `localStorage`)
 document.querySelector(".finalizar-compra").addEventListener("click", () => {
     // Redirigir a formulario_pago.html
-    window.location.href = "/formulario_pago.html";
+    window.location.href = "formulario_pago.html";
 });
 
 
