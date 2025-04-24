@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pet Shop/Alimentos_para_Peces</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bigshot+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/nav.css">
+    <link rel="stylesheet" href="css/catalogo.css">
+    <link rel="stylesheet" href="css/carrito.css">
+</head>
+
+<body>
+    <div class="app-container">
+        <!-- Header -->
+        <header class="header">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="imagenes/Logo.png" alt="PetShop Logo">
+                </a>
+            </div>
+
+            <div class="search-bar">
+                <input type="text" placeholder="Buscar productos...">
+                <img src="imagenes/buscar.png" alt="Ícono de búsqueda" class="search-image">
+            </div>
+            <div class="actions">
+                <a href="inicio_sesion.html" class="login">
+                    <img src="imagenes/icons8-usuario-100.png" alt="Iniciar Sesión">
+                    <span>Iniciar sesión</span>
+                </a>
+                <div class="cart">
+                    <img src="imagenes/icons8-carrito-de-compras-100.png" alt="Carrito">
+                    <span class="cart-count">0</span>
+                </div>
+            </div>
+        </header>
+        <nav>
+            <div class="menu-container">
+                <div class="menu-button">≡</div>
+                <ul class="menu">
+                    <li>
+                        <a href="perros.html">Perros</a>
+                    </li>
+                    <li>
+                        <a href="gatos.html">Gatos</a>
+                    </li>
+                    <li>
+                        <a href="roedores.html">Roedores</a>
+                    </li>
+                    <li>
+                        <a href="aves.html">Aves</a>
+                    </li>
+                    <li>
+                        <a href="peces.html">Peces</a>
+                    </li>
+                </ul>
+            </div>
+            <ul>
+                <li class="categorias">
+                    <div class="menu-container1">
+                        <div class="menu-button">CATEGORÍAS</div>
+                        <ul class="menu">
+                            <li>
+                                <a href="perros.html">Perros</a>
+                            </li>
+                            <li>
+                                <a href="gatos.html">Gatos</a>
+                            </li>
+                            <li>
+                                <a href="roedores.html">Roedores</a>
+                            </li>
+                            <li>
+                                <a href="aves.html">Aves</a>
+                            </li>
+                            <li>
+                                <a href="peces.html">Peces</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="fondo-menu menu1"><a href="index.html">INICIO</a></li>
+                <li class="menu1"><a href="perros.html">PERROS</a></li>
+                <li class="menu1"><a href="gatos.html">GATOS</a></li>
+                <li class="menu1"><a href="roedores.html">ROEDORES</a></li>
+                <li class="menu1"><a href="aves.html">AVES</a></li>
+                <li class="menu1"><a href="peces.html">PECES</a></li>
+            </ul>
+        </nav>
+        <section class="contenido">
+            <div class="breadcrumb">
+                <a href="index.html">Inicio</a> /
+                <a href="peces.html">Peces</a> /
+                <span class="activo">Alimentos</span>
+                <h1 class="titulo-categoria">Alimentos para Peces</h1>
+                <button class="boton-filtros">Filtros</button>
+                <div class="contenedor">
+                    <aside class="filtros">
+                        <button class="cerrar-filtros">✖</button>
+                        <h3 class="toggle" onclick="toggleSection(this)">Filtrar por Marca <span class="icon">▼</span>
+                        </h3>
+                        <div class="filter-content">
+                            <label><input type="checkbox" class="filtro" value="Escamas"> Escamas</label><br>
+                            <label><input type="checkbox" class="filtro" value="Tetra"> Tetra</label><br>
+                            <label><input type="checkbox" class="filtro" value="JBL"> JBL</label><br>
+                            <label><input type="checkbox" class="filtro" value="Sera"> Sera</label><br>
+                        </div>
+                        <button class="limpiar-filtros">Eliminar selección</button>
+                        <button class="aplicar-filtros">Aplicar</button>
+                    </aside>
+                    <section class="catalogo">
+                        <div class="producto" data-marca="Escamas" data-precio="35.00">
+                            <a href="productos_peces/alimento1.html" class="producto-link">
+                                <img src="imagenes/imagenes_alimentos_peces/AlimentoPe1_Vivanimals_Escamas_para_peces_de_agua_fria.jpg"
+                                    alt="Vivanimals Escamas para peces de agua fría">
+                                <h3>Vivanimals Escamas para peces de agua fría</h3>
+                                <p>Bs. 35,00</p>
+                            </a>
+                            <div class="cantidad">
+                                <button class="decrementar" data-index="0">-</button>
+                                <input type="text" class="cantidad-input" data-index="0" value="1" readonly>
+                                <button class="incrementar" data-index="0">+</button>
+                            </div>
+                            <button class="agregar">AGREGAR</button>
+                        </div>
+
+                        <div class="producto" data-marca="Escamas" data-precio="45.00">
+                            <a href="productos_peces/alimento2.html" class="producto-link">
+                                <img src="imagenes/imagenes_alimentos_peces/AlimentoPe2_Vivanimals_Escamas_para_peces_tropicales.jpg"
+                                    alt="Vivanimals Escamas para peces tropicales">
+                                <h3>Vivanimals Escamas para peces tropicales</h3>
+                                <p>Bs. 45,00</p>
+                            </a>
+                            <div class="cantidad">
+                                <button class="decrementar" data-index="1">-</button>
+                                <input type="text" class="cantidad-input" data-index="1" value="1" readonly>
+                                <button class="incrementar" data-index="1">+</button>
+                            </div>
+                            <button class="agregar">AGREGAR</button>
+                        </div>
+
+                        <div class="producto" data-marca="Tetra" data-precio="25.50">
+                            <a href="productos_peces/alimento3.html" class="producto-link">
+                                <img src="imagenes/imagenes_alimentos_peces/AlimentoPe3_TetraMin_Escamas_para_peces_ornamentales.jpg"
+                                    alt="TetraMin Escamas para peces Ornamentales">
+                                <h3>TetraMin Escamas para peces Ornamentales</h3>
+                                <p>Bs. 25,50</p>
+                            </a>
+                            <div class="cantidad">
+                                <button class="decrementar" data-index="2">-</button>
+                                <input type="text" class="cantidad-input" data-index="2" value="1" readonly>
+                                <button class="incrementar" data-index="2">+</button>
+                            </div>
+                            <button class="agregar">AGREGAR</button>
+                        </div>
+
+                        <div class="producto" data-marca="Tetra" data-precio="51.20">
+                            <a href="productos_peces/alimento4.html" class="producto-link">
+                                <img src="imagenes/imagenes_alimentos_peces/AlimentoPe4_Tetra_Goldfish_Escamas_para_peces.jpg"
+                                    alt="Tetra Goldfish Escamas para peces">
+                                <h3>Tetra Goldfish Escamas para peces</h3>
+                                <p>Bs. 51,20</p>
+                            </a>
+                            <div class="cantidad">
+                                <button class="decrementar" data-index="3">-</button>
+                                <input type="text" class="cantidad-input" data-index="3" value="1" readonly>
+                                <button class="incrementar" data-index="3">+</button>
+                            </div>
+                            <button class="agregar">AGREGAR</button>
+                        </div>
+
+                        <div class="producto" data-marca="Sera" data-precio="25.50">
+                            <a href="productos_peces/alimento5.html" class="producto-link">
+                                <img src="imagenes/imagenes_alimentos_peces/AlimentoPe5_Sera_Vipagran_Granulos_para_peces.jpg"
+                                    alt="Sera Vipagran Granulos para peces">
+                                <h3>Sera Vipagran Granulos para peces</h3>
+                                <p>Bs. 25,50</p>
+                            </a>
+                            <div class="cantidad">
+                                <button class="decrementar" data-index="4">-</button>
+                                <input type="text" class="cantidad-input" data-index="4" value="1" readonly>
+                                <button class="incrementar" data-index="4">+</button>
+                            </div>
+                            <button class="agregar">AGREGAR</button>
+                        </div>
+
+                        <div class="producto" data-marca="JBL" data-precio="35.75">
+                            <a href="productos_peces/alimento6.html" class="producto-link">
+                                <img src="imagenes/imagenes_alimentos_peces/AlimentoPe6_JBL_Holiday_Bloques_de_Comida_para_peces.jpg"
+                                    alt="JBL Holiday Bloques de Comida para peces">
+                                <h3>JBL Holiday Bloques de Comida para peces</h3>
+                                <p>Bs. 35,75</p>
+                            </a>
+                            <div class="cantidad">
+                                <button class="decrementar" data-index="5">-</button>
+                                <input type="text" class="cantidad-input" data-index="5" value="1" readonly>
+                                <button class="incrementar" data-index="5">+</button>
+                            </div>
+                            <button class="agregar">AGREGAR</button>
+                        </div>
+
+                        <div class="producto" data-marca="JBL" data-precio="25.00">
+                            <a href="productos_peces/alimento7.html" class="producto-link">
+                                <img src="imagenes/imagenes_alimentos_peces/AlimentoPe7_JBL_Novopleco_Pastillas_para_peces_de_fondo.jpg"
+                                    alt="JBL Novopleco Pastillas para peces de fondo">
+                                <h3>JBL Novopleco Pastillas para peces de fondo</h3>
+                                <p>Bs. 25,00</p>
+                            </a>
+                            <div class="cantidad">
+                                <button class="decrementar" data-index="6">-</button>
+                                <input type="text" class="cantidad-input" data-index="6" value="1" readonly>
+                                <button class="incrementar" data-index="6">+</button>
+                            </div>
+                            <button class="agregar">AGREGAR</button>
+                        </div>
+
+                        <div class="producto" data-marca="Sera" data-precio="22.40">
+                            <a href="productos_peces/alimento8.html" class="producto-link">
+                                <img src="imagenes/imagenes_alimentos_peces/AlimentoPe8_Sera_Shrimps_Nature_Alimento_para_gambas.jpg"
+                                    alt="Sera Shrimps Nature Alimento para gambas">
+                                <h3>Sera Shrimps Nature Alimento para gambas</h3>
+                                <p>Bs. 22,40</p>
+                            </a>
+                            <div class="cantidad">
+                                <button class="decrementar" data-index="7">-</button>
+                                <input type="text" class="cantidad-input" data-index="7" value="1" readonly>
+                                <button class="incrementar" data-index="7">+</button>
+                            </div>
+                            <button class="agregar">AGREGAR</button>
+                        </div>
+
+                        <div class="producto" data-marca="Sera" data-precio="55.10">
+                            <a href="productos_peces/alimento9.html" class="producto-link">
+                                <img src="imagenes/imagenes_alimentos_peces/AlimentoPe9_Sera_Pond_Mix_Royal_alimento_para_peces.jpg"
+                                    alt="Sera Pond Mix Royal alimento para peces">
+                                <h3>Sera Pond Mix Royal alimento para peces</h3>
+                                <p>Bs. 55,10</p>
+                            </a>
+                            <div class="cantidad">
+                                <button class="decrementar" data-index="8">-</button>
+                                <input type="text" class="cantidad-input" data-index="8" value="1" readonly>
+                                <button class="incrementar" data-index="8">+</button>
+                            </div>
+                            <button class="agregar">AGREGAR</button>
+                        </div>
+
+                        <div class="producto1" data-marca="Sera" data-precio="40.00">
+                            <a href="productos_peces/alimento10.html" class="producto-link">
+                                <img src="imagenes/imagenes_alimentos_peces/AlimentoPe10_Sera_Goldy_Gran_Nature_Alimento_para_peces_de_agua_fria.jpg"
+                                    alt="Sera Goldy Gran Nature Alimento para peces de agua fría">
+                                <h3>Sera Goldy Gran Nature Alimento para peces de agua fría</h3>
+                                <p>Bs. 40,00</p>
+                            </a>
+                            <div class="cantidad">
+                                <button class="decrementar" data-index="9">-</button>
+                                <input type="text" class="cantidad-input" data-index="9" value="1" readonly>
+                                <button class="incrementar" data-index="9">+</button>
+                            </div>
+                            <button class="agregar">AGREGAR</button>
+                        </div>
+
+                    </section>
+                </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="parent">
+            <div class="div1">
+                <div class="info">
+                    <h3 class="footer-title">UBICACIÓN</h3>
+                    <div class="ubicaciones">
+                        <img src="imagenes/icons8-ubicación-24.png" alt="">
+                        <p>Av. Busch y Tercer Anillo </p>
+                    </div>
+                    <div class="ubicaciones">
+                        <img src="imagenes/icons8-ubicación-24.png" alt="">
+                        <p>Av. America esq. Av Pando </p>
+                    </div>
+                </div>
+            </div>
+            <div class="div2">
+                <div class="info">
+                    <h3 class="footer-title">CONTACTANOS</h3>
+                    <p>Atención Telefónica</p>
+                    <p>(591) 54488474</p>
+                </div>
+            </div>
+            <div class="div3">
+                <div class="info">
+                    <h3 class="footer-title ayuda-title">AYUDA</h3>
+                    <a href="preguntas_frecuentes.html">Preguntas frecuentes</a>
+                    <a href="terminos_condiciones.html">Términos y condiciones</a>
+                    <a href="politica_privacidad.html">Política de privacidad</a>
+                </div>
+            </div>
+            <div class="div4">
+                <p>SÍGUENOS EN:</p>
+                <div class="imagenes-redes-sociales">
+                    <a href="https://www.facebook.com/people/Pet-Shop-Huellitas/100063562781781/" target="_blank"
+                        rel="noopener noreferrer">
+                        <img src="imagenes/icons8-facebook-48.png" alt="facebook">
+                    </a>
+                    <a href="https://www.instagram.com/petshop_huellitas/" target="_blank" rel="noopener noreferrer">
+                        <img src="imagenes/icons8-instagram-48.png" alt="instagram">
+                    </a>
+                    <a href="https://www.tiktok.com/@petshophuellita?is_from_webapp=1&sender_device=pc" target="_blank"
+                        rel="noopener noreferrer">
+                        <img src="imagenes/icons8-tiktok-48.png" alt="tiktok">
+                    </a>
+                </div>
+            </div>
+            <div class="div5">
+                <p>© Pet Shop - 2025</p>
+            </div>
+        </footer>
+    </div>
+    <div class="cart-container">
+        <div class="cart-content">
+            <div class="cart-header">
+                <h2>Carrito de compras</h2>
+                <button class="close-cart">❌</button>
+            </div>
+            <div class="cart-items"></div>
+            <p class="total-price">Total: Bs. 0,00</p>
+
+            <div class="cart-actions">
+                <button class="vaciar-carrito">🗑 Vaciar Carrito</button>
+                <button class="finalizar-compra">🛒 Finalizar Compra</button>
+            </div>
+        </div>
+    </div>
+    <script src="js/main.js"></script>
+    <script src="js/nav.js"></script>
+    <script src="js/catalogo.js"></script>
+    <script src="js/carrito.js"></script>
+</body>
+
+</html>

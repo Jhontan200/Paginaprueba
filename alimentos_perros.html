@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pet Shop/Alimentos_para_Perros</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bigshot+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/nav.css">
+    <link rel="stylesheet" href="css/catalogo.css">
+    <link rel="stylesheet" href="css/carrito.css">
+</head>
+
+<body>
+    <div class="app-container">
+        <!-- Header -->
+        <header class="header">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="imagenes/Logo.png" alt="PetShop Logo">
+                </a>
+            </div>
+
+            <div class="search-bar">
+                <input type="text" placeholder="Buscar productos...">
+                <img src="imagenes/buscar.png" alt="Ícono de búsqueda" class="search-image">
+            </div>
+            <div class="actions">
+                <a href="inicio_sesion.html" class="login">
+                    <img src="imagenes/icons8-usuario-100.png" alt="Iniciar Sesión">
+                    <span>Iniciar sesión</span>
+                </a>
+                <div class="cart">
+                    <img src="imagenes/icons8-carrito-de-compras-100.png" alt="Carrito">
+                    <span class="cart-count">0</span>
+                </div>
+            </div>
+        </header>
+        <nav>
+            <div class="menu-container">
+                <div class="menu-button">≡</div>
+                <ul class="menu">
+                    <li>
+                        <a href="perros.html">Perros</a>
+                    </li>
+                    <li>
+                        <a href="gatos.html">Gatos</a>
+                    </li>
+                    <li>
+                        <a href="roedores.html">Roedores</a>
+                    </li>
+                    <li>
+                        <a href="aves.html">Aves</a>
+                    </li>
+                    <li>
+                        <a href="peces.html">Peces</a>
+                    </li>
+                </ul>
+            </div>
+            <ul>
+                <li class="categorias">
+                    <div class="menu-container1">
+                        <div class="menu-button">CATEGORÍAS</div>
+                        <ul class="menu">
+                            <li>
+                                <a href="perros.html">Perros</a>
+                            </li>
+                            <li>
+                                <a href="gatos.html">Gatos</a>
+                            </li>
+                            <li>
+                                <a href="roedores.html">Roedores</a>
+                            </li>
+                            <li>
+                                <a href="aves.html">Aves</a>
+                            </li>
+                            <li>
+                                <a href="peces.html">Peces</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="fondo-menu menu1"><a href="index.html">INICIO</a></li>
+                <li class="menu1"><a href="perros.html">PERROS</a></li>
+                <li class="menu1"><a href="gatos.html">GATOS</a></li>
+                <li class="menu1"><a href="roedores.html">ROEDORES</a></li>
+                <li class="menu1"><a href="aves.html">AVES</a></li>
+                <li class="menu1"><a href="peces.html">PECES</a></li>
+            </ul>
+        </nav>
+        <section class="contenido">
+
+            <!-- Indicador de ubicación (Breadcrumb) -->
+            <div class="breadcrumb">
+                <a href="index.html">Inicio</a> /
+                <a href="perros.html">Perros</a> /
+                <span class="activo">Alimentos</span>
+            </div>
+
+            <!-- Título de la categoría -->
+            <h1 class="titulo-categoria">Alimentos para Perros</h1>
+            <!-- Botón para abrir filtros en pantallas pequeñas -->
+            <button class="boton-filtros">Filtros</button>
+
+
+            <!-- Aquí comienza el contenido que incluye filtros y catálogo -->
+            <div class="contenedor">
+                <!-- Filtros -->
+                <aside class="filtros">
+                    <button class="cerrar-filtros">✖</button>
+
+                    <!-- Sub-Categoría -->
+                    <h3 class="toggle" onclick="toggleSection(this)">Sub-Categoría <span class="icon">▼</span></h3>
+                    <div class="filter-content">
+                        <label><input type="checkbox" class="filtro" value="Alimentos"> Alimentos Secos</label><br>
+                        <label><input type="checkbox" class="filtro" value="Lata"> Latas</label><br>
+                    </div>
+
+                    <!-- Filtrar por Peso -->
+                    <h3 class="toggle" onclick="toggleSection(this)">Filtrar por Peso <span class="icon">▼</span></h3>
+                    <div class="filter-content">
+                        <label><input type="checkbox" class="filtro" value="340_gr"> 340 gr</label><br>
+                        <label><input type="checkbox" class="filtro" value="3_kg"> 3 kg</label><br>
+                        <label><input type="checkbox" class="filtro" value="7.5_kg"> 7,5 kg</label><br>
+                        <label><input type="checkbox" class="filtro" value="20_kg"> 20 kg</label><br>
+                        <label><input type="checkbox" class="filtro" value="21_kg"> 21 kg</label><br>
+                    </div>
+
+                    <!-- Filtrar por Marca -->
+                    <h3 class="toggle" onclick="toggleSection(this)">Filtrar por Marca <span class="icon">▼</span></h3>
+                    <div class="filter-content">
+                        <label><input type="checkbox" class="filtro" value="Complete"> Complete</label><br>
+                        <label><input type="checkbox" class="filtro" value="Hop"> Hop</label><br>
+                        <label><input type="checkbox" class="filtro" value="Balanced"> Balanced</label><br>
+                        <label><input type="checkbox" class="filtro" value="Premium"> Premium</label><br>
+                        <label><input type="checkbox" class="filtro" value="Excellent"> Excellent</label><br>
+                        <label><input type="checkbox" class="filtro" value="Agility"> Agility</label><br>
+                        <label><input type="checkbox" class="filtro" value="Sieger"> Sieger</label><br>
+                        <label><input type="checkbox" class="filtro" value="Pedigree"> Pedigree</label><br>
+                    </div>
+
+                    <!-- Filtrar por Edad -->
+                    <h3 class="toggle" onclick="toggleSection(this)">Filtrar por Edad <span class="icon">▼</span></h3>
+                    <div class="filter-content">
+                        <label><input type="checkbox" class="filtro" value="Cachorro"> Cachorro</label><br>
+                        <label><input type="checkbox" class="filtro" value="Adulto"> Adulto</label><br>
+                        <label><input type="checkbox" class="filtro" value="Senior"> Senior</label><br>
+                    </div>
+
+                    <!-- Botones adicionales -->
+                    <button class="limpiar-filtros">Eliminar selección</button>
+                    <button class="aplicar-filtros">Aplicar</button>
+                </aside>
+
+
+                <!-- Catálogo -->
+                <section class="catalogo">
+                    <div class="producto1" data-categoria="Alimentos" data-peso="20_kg" data-marca="Complete"
+                        data-edad="Adulto" data-precio="350.00">
+                        <a href="productos_perros/alimento1_perro.html" class="producto-link">
+                            <img src="imagenes/imagenes_alimentos_perros/Seco1_Complete_Perro_Adulto_Raza_Mediana_Y_Grande_20kg.webp"
+                                alt="Complete Perro Adulto Raza Mediana y Grande 20 kg">
+                            <h3>Complete Perro Adulto Raza Mediana y Grande 20 kg</h3>
+                            <p>Bs. 350,00</p>
+                        </a>
+                        <div class="cantidad">
+                            <button class="decrementar" data-index="0">-</button>
+                            <input type="text" class="cantidad-input" data-index="0" value="1" readonly>
+                            <button class="incrementar" data-index="0">+</button>
+                        </div>
+                        <button class="agregar">AGREGAR</button>
+                    </div>
+
+                    <div class="producto" data-categoria="Alimentos" data-peso="21_kg" data-marca="Hop"
+                        data-edad="Adulto" data-precio="450.00">
+                        <a href="productos_perros/alimento2.html" class="producto-link">
+                            <img src="imagenes/imagenes_alimentos_perros/Seco2_Hop_Perro_Adulto_Raza_Mediana_y_Grande_21kg.webp"
+                                alt="Hop Perro Adulto Raza Mediana y Grande 21 kg">
+                            <h3>Hop Perro Adulto Raza Mediana y Grande 21 kg</h3>
+                            <p>Bs. 450,00</p>
+                        </a>
+                        <div class="cantidad">
+                            <button class="decrementar" data-index="1">-</button>
+                            <input type="text" class="cantidad-input" data-index="1" value="1" readonly>
+                            <button class="incrementar" data-index="1">+</button>
+                        </div>
+                        <button class="agregar">AGREGAR</button>
+                    </div>
+                    <div class="producto" data-categoria="Alimentos" data-marca="Balanced" data-peso="20_kg"
+                        data-edad="Adulto" data-precio="255.50">
+                        <a href="productos_perros/alimento3.html" class="producto-link">
+                            <img src="imagenes/imagenes_alimentos_perros/Seco3_Balanced_Perro_Adulto_Raza Mediana_20kg.webp"
+                                alt="Balanced Perro Adulto Raza Mediana 20 kg">
+                            <h3>Balanced Perro Adulto Raza Mediana 20 kg</h3>
+                            <p>Bs. 255,50</p>
+                        </a>
+                        <div class="cantidad">
+                            <button class="decrementar" data-index="2">-</button>
+                            <input type="text" class="cantidad-input" data-index="2" value="1" readonly>
+                            <button class="incrementar" data-index="2">+</button>
+                        </div>
+                        <button class="agregar">AGREGAR</button>
+                    </div>
+
+                    <div class="producto" data-categoria="Alimentos" data-marca="Complete" data-peso="20_kg"
+                        data-edad="Senior" data-precio="510.20">
+                        <a href="productos_perros/alimento4.html" class="producto-link">
+                            <img src="imagenes/imagenes_alimentos_perros/Seco4_Complete_Perro_Senior_20kg.webp"
+                                alt="Complete Perro Senior 20 kg">
+                            <h3>Complete Perro Senior 20 kg</h3>
+                            <p>Bs. 510,20</p>
+                        </a>
+                        <div class="cantidad">
+                            <button class="decrementar" data-index="3">-</button>
+                            <input type="text" class="cantidad-input" data-index="3" value="1" readonly>
+                            <button class="incrementar" data-index="3">+</button>
+                        </div>
+                        <button class="agregar">AGREGAR</button>
+                    </div>
+
+                    <div class="producto" data-categoria="Alimentos" data-marca="Balanced" data-peso="20_kg"
+                        data-edad="Adulto" data-precio="255.50">
+                        <a href="productos_perros/alimento5.html" class="producto-link">
+                            <img src="imagenes/imagenes_alimentos_perros/Seco5_Balanced_Perro_Adulto_Raza_Grande_20kg.webp"
+                                alt="Balanced Perro Adulto Raza Grande 20 kg">
+                            <h3>Balanced Perro Adulto Raza Grande 20 kg</h3>
+                            <p>Bs. 255,50</p>
+                        </a>
+                        <div class="cantidad">
+                            <button class="decrementar" data-index="4">-</button>
+                            <input type="text" class="cantidad-input" data-index="4" value="1" readonly>
+                            <button class="incrementar" data-index="4">+</button>
+                        </div>
+                        <button class="agregar">AGREGAR</button>
+                    </div>
+
+                    <div class="producto" data-categoria="Alimentos" data-marca="Premium" data-peso="20_kg"
+                        data-edad="Adulto" data-precio="355.75">
+                        <a href="productos_perros/alimento6.html" class="producto-link">
+                            <img src="imagenes/imagenes_alimentos_perros/Seco6_Premium_Perro_Adulto_20kg.webp"
+                                alt="Premium Perro Adulto 20 kg">
+                            <h3>Premium Perro Adulto 20 kg</h3>
+                            <p>Bs. 355,75</p>
+                        </a>
+                        <div class="cantidad">
+                            <button class="decrementar" data-index="5">-</button>
+                            <input type="text" class="cantidad-input" data-index="5" value="1" readonly>
+                            <button class="incrementar" data-index="5">+</button>
+                        </div>
+                        <button class="agregar">AGREGAR</button>
+                    </div>
+
+                    <div class="producto" data-categoria="Alimentos" data-marca="Excellent" data-peso="20_kg"
+                        data-edad="Adulto" data-precio="285.00">
+                        <a href="productos_perros/alimento7.html" class="producto-link">
+                            <img src="imagenes/imagenes_alimentos_perros/Seco7_Excellent_Perro_Adulto_Formula_20kg.webp"
+                                alt="Excellent Perro Adulto Formula 20kg">
+                            <h3>Excellent Perro Adulto Formula 20 kg</h3>
+                            <p>Bs. 285,00</p>
+                        </a>
+                        <div class="cantidad">
+                            <button class="decrementar" data-index="6">-</button>
+                            <input type="text" class="cantidad-input" data-index="6" value="1" readonly>
+                            <button class="incrementar" data-index="6">+</button>
+                        </div>
+                        <button class="agregar">AGREGAR</button>
+                    </div>
+
+                    <div class="producto" data-categoria="Alimentos" data-marca="Complete" data-peso="7.5_kg"
+                        data-edad="Adulto" data-precio="150.40">
+                        <a href="productos_perros/alimento8.html" class="producto-link">
+                            <img src="imagenes/imagenes_alimentos_perros/Seco8_Complete_Perro_Adulto_Raza_Pequena_75kg.webp"
+                                alt="Complete Perro Adulto Raza Pequeña 7,5 kg">
+                            <h3>Complete Perro Adulto Raza Pequeña 7,5 kg</h3>
+                            <p>Bs. 150,40</p>
+                        </a>
+                        <div class="cantidad">
+                            <button class="decrementar" data-index="7">-</button>
+                            <input type="text" class="cantidad-input" data-index="7" value="1" readonly>
+                            <button class="incrementar" data-index="7">+</button>
+                        </div>
+                        <button class="agregar">AGREGAR</button>
+                    </div>
+                    <div class="producto" data-categoria="Alimentos" data-marca="Agility" data-peso="20_kg"
+                        data-edad="Adulto" data-precio="255.10">
+                        <a href="productos_perros/alimento9.html" class="producto-link">
+                            <img src="imagenes/imagenes_alimentos_perros/Seco9_Agility_Perro_Adulto_20kg.webp"
+                                alt="Agility Perro Adulto 20 kg">
+                            <h3>Agility Perro Adulto 20 kg</h3>
+                            <p>Bs. 255,10</p>
+                        </a>
+                        <div class="cantidad">
+                            <button class="decrementar" data-index="8">-</button>
+                            <input type="text" class="cantidad-input" data-index="8" value="1" readonly>
+                            <button class="incrementar" data-index="8">+</button>
+                        </div>
+                        <button class="agregar">AGREGAR</button>
+                    </div>
+
+                    <div class="producto" data-categoria="Alimentos" data-marca="Balanced" data-peso="3_kg"
+                        data-edad="Adulto" data-precio="450.00">
+                        <a href="productos_perros/alimento10.html" class="producto-link">
+                            <img src="imagenes/imagenes_alimentos_perros/Seco10_Balanced_Perro_Adulto_Raza_Pequena_3kg.webp"
+                                alt="Balanced Perro Adulto Raza Pequeña 3 kg">
+                            <h3>Balanced Perro Adulto Raza Pequeña 3 kg</h3>
+                            <p>Bs. 450,00</p>
+                        </a>
+                        <div class="cantidad">
+                            <button class="decrementar" data-index="9">-</button>
+                            <input type="text" class="cantidad-input" data-index="9" value="1" readonly>
+                            <button class="incrementar" data-index="9">+</button>
+                        </div>
+                        <button class="agregar">AGREGAR</button>
+                    </div>
+
+                    <div class="producto" data-categoria="Lata" data-marca="Agility" data-peso="340_gr"
+                        data-edad="Adulto" data-precio="95.10">
+                        <a href="productos_perros/lata1.html" class="producto-link">
+                            <img src="imagenes/imagenes_alimentos_perros/Lata1_Lata_Agility_Perro_Sabor_Carne_340gr.webp"
+                                alt="Lata Agility Perro Sabor Carne 340 gr">
+                            <h3>Lata Agility Perro Sabor Carne 340 gr</h3>
+                            <p>Bs. 95,10</p>
+                        </a>
+                        <div class="cantidad">
+                            <button class="decrementar" data-index="10">-</button>
+                            <input type="text" class="cantidad-input" data-index="10" value="1" readonly>
+                            <button class="incrementar" data-index="10">+</button>
+                        </div>
+                        <button class="agregar">AGREGAR</button>
+                    </div>
+
+                    <div class="producto1" data-categoria="Lata" data-marca="Sieger" data-peso="340_gr"
+                        data-edad="Adulto" data-precio="85.00">
+                        <a href="productos_perros/lata2.html" class="producto-link">
+                            <img src="imagenes/imagenes_alimentos_perros/Lata2_Lata_Sieger_Perro_y_Gato_Adulto_Energy_Recovery_340gr.webp"
+                                alt="Lata Sieger Perro y Gato Adulto Energy Recovery 340 gr">
+                            <h3>Lata Sieger Perro y Gato Adulto Energy Recovery 340 gr</h3>
+                            <p>Bs. 85,00</p>
+                        </a>
+                        <div class="cantidad">
+                            <button class="decrementar" data-index="11">-</button>
+                            <input type="text" class="cantidad-input" data-index="11" value="1" readonly>
+                            <button class="incrementar" data-index="11">+</button>
+                        </div>
+                        <button class="agregar">AGREGAR</button>
+                    </div>
+
+                    <div class="producto2" data-categoria="Lata" data-marca="Sieger" data-peso="340_gr"
+                        data-edad="Adulto" data-precio="45.00">
+                        <a href="productos_perros/lata3.html" class="producto-link">
+                            <img src="imagenes/imagenes_alimentos_perros/Lata2_Lata_Sieger_Perro_y_Gato_Adulto_Energy_Recovery_340gr_1.webp"
+                                alt="Recovery Sieger 340 gr">
+                            <h3>Recovery Sieger 340 gr</h3>
+                            <p>Bs. 45,00</p>
+                        </a>
+                        <div class="cantidad">
+                            <button class="decrementar" data-index="12">-</button>
+                            <input type="text" class="cantidad-input" data-index="12" value="1" readonly>
+                            <button class="incrementar" data-index="12">+</button>
+                        </div>
+                        <button class="agregar">AGREGAR</button>
+                    </div>
+
+                    <div class="producto" data-categoria="Lata" data-marca="Agility" data-peso="340_gr"
+                        data-edad="Cachorro" data-precio="45.00">
+                        <a href="productos_perros/lata4.html" class="producto-link">
+                            <img src="imagenes/imagenes_alimentos_perros/Lata3_Lata_Agility_Perro_Cachorro_340gr.webp"
+                                alt="Lata Agility Perro Cachorro 340 gr">
+                            <h3>Lata Agility Perro Cachorro 340 gr</h3>
+                            <p>Bs. 45,00</p>
+                        </a>
+                        <div class="cantidad">
+                            <button class="decrementar" data-index="13">-</button>
+                            <input type="text" class="cantidad-input" data-index="13" value="1" readonly>
+                            <button class="incrementar" data-index="13">+</button>
+                        </div>
+                        <button class="agregar">AGREGAR</button>
+                    </div>
+
+                    <div class="producto" data-categoria="Lata" data-marca="Agility" data-peso="340_gr"
+                        data-edad="Adulto" data-precio="55.00">
+                        <a href="productos_perros/lata5.html" class="producto-link">
+                            <img src="imagenes/imagenes_alimentos_perros/Lata4_Lata_Agility_Perro_Sabor_Pollo_340gr.webp"
+                                alt="Lata Agility Perro Sabor Pollo 340 gr">
+                            <h3>Lata Agility Perro Sabor Pollo 340 gr</h3>
+                            <p>Bs. 55,00</p>
+                        </a>
+                        <div class="cantidad">
+                            <button class="decrementar" data-index="14">-</button>
+                            <input type="text" class="cantidad-input" data-index="14" value="1" readonly>
+                            <button class="incrementar" data-index="14">+</button>
+                        </div>
+                        <button class="agregar">AGREGAR</button>
+                    </div>
+
+                    <div class="producto1" data-categoria="Lata" data-marca="Pedigree" data-peso="340_gr"
+                        data-edad="Cachorro" data-precio="65.00">
+                        <a href="productos_perros/lata6.html" class="producto-link">
+                            <img src="imagenes/imagenes_alimentos_perros/Lata5_Lata_Pedigree_Perro_Cachorro_Sabor_Carne_340gr.webp"
+                                alt="Lata Pedigree Perro Cachorro Sabor Carne 340 gr">
+                            <h3>Lata Pedigree Perro Cachorro Sabor Carne 340 gr</h3>
+                            <p>Bs. 65,00</p>
+                        </a>
+                        <div class="cantidad">
+                            <button class="decrementar" data-index="15">-</button>
+                            <input type="text" class="cantidad-input" data-index="15" value="1" readonly>
+                            <button class="incrementar" data-index="15">+</button>
+                        </div>
+                        <button class="agregar">AGREGAR</button>
+                    </div>
+
+                    <div class="producto" data-categoria="Lata" data-marca="Sieger" data-peso="340_gr"
+                        data-edad="Adulto" data-precio="50.00">
+                        <a href="productos_perros/lata7.html" class="producto-link">
+                            <img src="imagenes/imagenes_alimentos_perros/Lata6_Lata_Sieger_Perro_Adulto_Salmon_y_Pollo_340gr.webp"
+                                alt="Lata Sieger Perro Adulto Salmon y Pollo 340 gr">
+                            <h3>Lata Sieger Perro Adulto Salmon y Pollo 340 gr</h3>
+                            <p>Bs. 50,00</p>
+                        </a>
+                        <div class="cantidad">
+                            <button class="decrementar" data-index="16">-</button>
+                            <input type="text" class="cantidad-input" data-index="16" value="1" readonly>
+                            <button class="incrementar" data-index="16">+</button>
+                        </div>
+                        <button class="agregar">AGREGAR</button>
+                    </div>
+
+                </section>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="parent">
+            <div class="div1">
+                <div class="info">
+                    <h3 class="footer-title">UBICACIÓN</h3>
+                    <div class="ubicaciones">
+                        <img src="imagenes/icons8-ubicación-24.png" alt="">
+                        <p>Av. Busch y Tercer Anillo </p>
+                    </div>
+                    <div class="ubicaciones">
+                        <img src="imagenes/icons8-ubicación-24.png" alt="">
+                        <p>Av. America esq. Av Pando </p>
+                    </div>
+                </div>
+            </div>
+            <div class="div2">
+                <div class="info">
+                    <h3 class="footer-title">CONTACTANOS</h3>
+                    <p>Atención Telefónica</p>
+                    <p>(591) 54488474</p>
+                </div>
+            </div>
+            <div class="div3">
+                <div class="info">
+                    <h3 class="footer-title ayuda-title">AYUDA</h3>
+                    <a href="preguntas_frecuentes.html">Preguntas frecuentes</a>
+                    <a href="terminos_condiciones.html">Términos y condiciones</a>
+                    <a href="politica_privacidad.html">Política de privacidad</a>
+                </div>
+            </div>
+            <div class="div4">
+                <p>SÍGUENOS EN:</p>
+                <div class="imagenes-redes-sociales">
+                    <a href="https://www.facebook.com/people/Pet-Shop-Huellitas/100063562781781/" target="_blank"
+                        rel="noopener noreferrer">
+                        <img src="imagenes/icons8-facebook-48.png" alt="facebook">
+                    </a>
+                    <a href="https://www.instagram.com/petshop_huellitas/" target="_blank" rel="noopener noreferrer">
+                        <img src="imagenes/icons8-instagram-48.png" alt="instagram">
+                    </a>
+                    <a href="https://www.tiktok.com/@petshophuellita?is_from_webapp=1&sender_device=pc" target="_blank"
+                        rel="noopener noreferrer">
+                        <img src="imagenes/icons8-tiktok-48.png" alt="tiktok">
+                    </a>
+                </div>
+            </div>
+            <div class="div5">
+                <p>© Pet Shop - 2025</p>
+            </div>
+        </footer>
+    </div>
+    <div class="cart-container">
+        <div class="cart-content">
+            <div class="cart-header">
+                <h2>Carrito de compras</h2>
+                <button class="close-cart">❌</button>
+            </div>
+            <div class="cart-items"></div>
+            <p class="total-price">Total: Bs. 0,00</p>
+
+            <div class="cart-actions">
+                <button class="vaciar-carrito">🗑 Vaciar Carrito</button>
+                <button class="finalizar-compra">🛒 Finalizar Compra</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/carrito.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/nav.js"></script>
+    <script src="js/catalogo.js"></script>
+</body>
+
+</html>
