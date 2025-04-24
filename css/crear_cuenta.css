@@ -1,0 +1,181 @@
+/* Contenedor principal */
+footer{
+    margin-top: 0 !important;
+}
+.container {
+    display: flex;
+    height: 750px;
+    margin-bottom: 0;
+    transition: all 0.5s ease-in-out;
+    font-family: Arial, sans-serif;
+}
+
+/* Sección izquierda (Carrusel) */
+.left {
+    position: relative;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    text-align: center;
+    transition: all 0.5s ease-in-out;
+}
+
+/* Sección derecha (Formulario) */
+.right {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: #ffffff;
+}
+
+/* Formulario de creación de cuenta */
+.register-form {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    text-align: left;
+}
+
+/* Labels y campos (Mismo ancho para todos) */
+.label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    font-size: 16px;
+    color: #834700;
+}
+
+.input, .register-btn {
+    width: 100%; /* 🔥 Ahora todos tienen el mismo ancho */
+    padding: 12px; /* Uniformidad en tamaño */
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+/* Botón de crear cuenta */
+.register-btn {
+    background-color: #834700;
+    color: white;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.register-btn:hover {
+    background-color: #602805; /* 🔥 Cambio de color al pasar el mouse */
+}
+
+/* Estilos del carrusel */
+.carousel {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+/* Imágenes dentro del carrusel */
+.slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+/* Overlay sobre el carrusel */
+.overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* 🔥 Fondo oscuro translúcido */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    z-index: 2; /* 🔥 Asegura que esté por encima del carrusel */
+}
+
+/* Carrusel detrás del overlay */
+.carousel {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+/* Mostrar la primera imagen al inicio */
+.slide:first-child {
+    opacity: 1;
+}
+.title{
+    color: #834700;
+    font-size: 25px;
+}
+.titulo-cuenta{
+    color: yellow;
+    font-size: 30px;
+    margin-bottom: 0;
+}
+.texto-cuenta{
+    padding: 20px;
+    text-align: center;
+    font-size: 20px;
+    color: white;
+    font-weight: bold;
+}
+
+/* Animación de entrada */
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ✅ Diseño responsivo */
+@media screen and (max-width: 768px) {
+    .container {
+        flex-direction: column-reverse; /* 🔥 Invierte el orden */
+        height: auto;
+    }
+    .register-form {
+        width: 80%; /* Ajustar ancho para dispositivos móviles */
+        max-width: 300px !important; /* Limitar el ancho para que no se vea enorme */
+        margin: 0 35px 10px 0 !important; /* 🔥 Centra el formulario horizontalmente */
+    }
+    .title{
+        text-align: center !important;
+        margin-right: 25px;
+    }
+
+    .left, .right {
+        width: 100%;
+        display: flex;
+        animation: slideDown 0.8s ease-in-out;
+    }
+
+    .register-form {
+        width: 90%;
+        max-width: 400px;
+        margin: 0 auto;
+    }
+
+    .carousel {
+        width: 100%;
+        height: 350px; /* Ajusta altura para móviles */
+    }
+}

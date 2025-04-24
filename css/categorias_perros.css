@@ -1,0 +1,231 @@
+/* Contenedor de categorías en pantallas grandes */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.content-grid {
+    flex-grow: 1; /* Permite que el contenido se expanda sin forzar espacio extra */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Asegura que los elementos no se estiren innecesariamente */
+}
+
+.category-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px !important;
+    flex-wrap: wrap;
+}
+.category-header {
+    text-align: center; /* Centra el título */
+    width: 100%;
+}
+
+.category-title {
+    font-size: 2.5em;
+    font-weight: bold;
+    display: block;
+}
+
+.category {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 400px;
+    position: relative;
+}
+.image-container {
+    position: relative;
+    width: 100%;
+}
+
+.category-image {
+    width: 100%;
+    height: 300px;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.category-image.default {
+    opacity: 1;
+}
+
+.category-image.hover {
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: fill;
+}
+/* Sombreado sobre la imagen */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Fondo negro semi-transparente */
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* Texto encima de la imagen */
+.category-title-hover {
+    position: absolute;
+    top: 35%; /* Ajusta la posición del título */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: rgb(255, 251, 0);
+    font-size: 30px;
+    font-weight: bolder;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    text-align: center;
+    pointer-events: none;
+}
+
+.category-text-hover {
+    position: absolute;
+    top: 55%; /* Ajusta la posición del texto */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 1.5em;
+    font-weight: bold;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    text-align: center;
+    pointer-events: none;
+}
+
+
+.category-title-hover {
+    top: 35%; /* Posición del título */
+}
+
+.category-text-hover {
+    top: 55%; /* Posición del texto debajo */
+}
+
+.category:hover .category-title-hover,
+.category:hover .category-text-hover {
+    opacity: 1;
+}
+
+
+/* Activar solo en la imagen al hacer hover */
+.category:hover .category-image.default {
+    opacity: 0;
+}
+
+.category:hover .category-image.hover {
+    opacity: 1;
+}
+
+.category:hover .overlay {
+    opacity: 1;
+}
+
+.category:hover .category-text-hover {
+    opacity: 1;
+}
+
+/* Asegura que el texto esté debajo de la imagen */
+.category-text {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+/* Responsiveness: Pantallas pequeñas */
+@media (max-width: 768px) {
+    .category-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .category-container {
+        display: flex;
+        justify-content: center;
+        gap: 10px !important;
+        flex-wrap: wrap;
+    }
+
+    .category {
+        display: flex !important;
+        flex-direction: column;
+        align-items: center;
+        max-width: 350px !important;
+        position: relative;
+        margin-bottom: 5px !important;
+    }
+    .image-container {
+        position: relative;
+        width: 100% !important;
+    }
+    
+    .category-image {
+        width: 100%;
+        height: 300px !important;
+        transition: opacity 0.3s ease-in-out;
+    }
+    .category-text {
+        font-size: 40px;
+    }
+    .category-title-hover {
+        position: absolute;
+        top: 35%; /* Ajusta la posición del título */
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: rgb(255, 251, 0);
+        font-size: 30px;
+        font-weight: bolder;
+        opacity: 0;
+        transition: opacity 0.3s ease-in-out;
+        text-align: center;
+        pointer-events: none;
+    }
+    
+    .category-text-hover {
+        position: absolute;
+        top: 55%; /* Ajusta la posición del texto */
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: white;
+        font-size: 20px;
+        font-weight: bold;
+        opacity: 0;
+        transition: opacity 0.3s ease-in-out;
+        text-align: center;
+        pointer-events: none;
+        margin-top: 40px !important;
+    }
+}
+@media (min-width: 700px) and (max-width: 1900px) {
+    .category-image {
+        width: 100%;
+        height: 450px;
+        transition: opacity 0.3s ease-in-out;
+    }
+    .category-text {
+        text-align: center;
+        margin-top: 10px;
+        font-size: 50px !important;
+    }
+    .category-title {
+        margin-top: 10px;
+        font-size: 70px;
+        font-weight: bold;
+        display: block;
+        margin-bottom: 25px;
+    }
+    .category-container {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+}
