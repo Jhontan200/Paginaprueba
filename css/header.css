@@ -14,7 +14,7 @@
   position: relative;
   display: flex;
   align-items: center;
-  width: 45%;
+  width: 100%;
   /* O ajuste al tamaño necesario */
 }
 
@@ -35,7 +35,7 @@
 
 .search-bar input {
   height: 40px;
-  padding-right: 40px;
+  padding-right: 40px !important;
   /* Espacio adicional para el ícono */
   width: 100%;
   /* Asegura que ocupe todo el contenedor */
