@@ -1,7 +1,7 @@
 // Lista simulada de productos
 const productos = [
     { nombre: "Collar para perro", link: "productos_perros/accesorio1.html" },
-    { nombre: "Juguete para gato", link: "productos/juguete.html" },
+    { nombre: "Juguete para gato", link: "productos_perros/accesorio2.html" },
     { nombre: "Comida para perro", link: "productos/comida-perro.html" },
     { nombre: "Arena para gato", link: "productos/arena.html" },
     { nombre: "Champú para mascotas", link: "productos/shampoo.html" }
