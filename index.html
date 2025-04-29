@@ -11,7 +11,9 @@
   <link rel="stylesheet" href="css/footer.css">
   <link rel="stylesheet" href="css/nav.css">
   <link rel="stylesheet" href="css/carrusel.css">
+  <link rel="stylesheet" href="css/chatbot.css">
   <link rel="stylesheet" href="css/carrito.css">
+  <link rel="stylesheet" href="css/busqueda.css">
 </head>
 
 <body>
@@ -23,15 +25,29 @@
           <img src="imagenes/Logo.png" alt="PetShop Logo">
         </a>
       </div>
+      <div class="search-bar-container">
+        <div class="search-bar">
+          <input type="text" id="searchBar" placeholder="Buscar productos...">
+          <img src="imagenes/buscar.png" alt="Ícono de búsqueda" class="search-image">
+          <div id="searchModal" class="search-modal hidden">
+            <ul id="resultsList"></ul>
+          </div>
+        </div>
 
-      <div class="search-bar">
-        <input type="text" placeholder="Buscar productos...">
-        <img src="imagenes/buscar.png" alt="Ícono de búsqueda" class="search-image">
+        <!-- Resultados tipo desplegable -->
+
       </div>
+
       <div class="actions">
-        <a href="inicio_sesion.html" class="login">
+        <a href="inicio_sesion.html" class="login" id="login-link">
           <img src="imagenes/icons8-usuario-100.png" alt="Iniciar Sesión">
           <span>Iniciar sesión</span>
+        </a>
+        <a href="#" class="login" id="logout-link" style="display: none;">
+          <img
+            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAAEb0lEQVR4nO1aW4xdYxReMzVnrXNaPWZmr7U7lAoTZa9/zzSOUJfw4BL3S2RUNEElPHqTeBSCxAMRtybCkxfaeuEJIRISIqLFg6kJnVYTEXUrqiiy9jlj9uyzZ5yzz97nzJF+yf/2X9a31/rXvy4b4Cj+p9iwZhU7j25SoSeU6XXHuNcJHXRCfzfGT05wvzK9YXNCoVtsDSwHbFwL5YDpNsf0phM6EhO61XHECb7rGLdM+LCyJwSU6R5l/DqD8OmD8YBjurdrhNQvXa1MX+RGoGngfifl6wsjsG4dkDJtXUKIvxzje47xwUBK1054pdMChlVz69ePwrEB43gopesc4wOO8f2lzFEZX8hdO05W+ir4YeqBgt+b8KHgKe3uO+njyQ1S3y6inY+CMTopFxLRYUIzzTZNh1Xw4fERWN3pGbVhqNYJ0eGUu7NXGU/tWBNO6PMUEp9O+EMOcsaEP+RMCylkZtePlo/PtOn4OKAKfpCi7h21MahAQaiNQUUFX0oh81imDZ3Qk833gZ6fAlgBxWNQhZ5LnP1427so42UpXuTlLpGYw6A5keh9EXzndK8yBu2bFH2WILLb3Cf0E5xXujuh0j8CrmyAfkIQQKkR7MVN6tFeyDJVN+OBTIstek2Y1MFg7eqR3KX8LzkYtyjTz8r4jZPyDW1voEKv9lobUwAr6iH/vGmrT5ta3sAuswr9HidSxKPXorc6kLyn6tPNLa12XunK5OsNPYJy+UYTPhOZyGd3+gDlCPVpUyYy9uAlLvrmrkmdJxll+mQBkdHyWbAMoO2SUcGv4pMzR5sNN55rGixpeRD9aUla8+FCP8YndpBnDC6eKOU8GGebTlehH+KTLNnJSGSgaG24+TGTQgT3xSdNjpRPyEgEQq90RUrgmbM26LdQ8JJmIky74hPP8MvnwDJAIHhnVNhIkHBe6arUBU5w24LLxHQr9BsJgzLen1Df09BvJAxO8NKEe5uGHsEJbc5EYi7pjybHFode5UzoAVwiaGyZxL8bCO5ImNdThUq8mBwce4faJWGIypkLL/yvAVfWFCbxUnIw7jEXHgpenDWp2Z0gsxX6EUHdW8TNywrN50K/4SKAY5Tp44RWvgyr1eEeijWQaVXAdEGy5G/tNKuyQJdQAxiyt8zcsKUYVkzPtJEKPtQc4+D2bpCpRSRwey4e1EzMMb2VJGPNzCLNLKxWh5XptZSP+EjmTSercFwymGzkAXuU6fxcGcyb9EzTxxOa7rgDbO9IKhm7Q0zPtl1cToHtoUzPpLXijEQn2WqTZtLMrPHyHoqEyJDjW03ZbF+ZfknbWwXfzr0XX78zUcloqX76jD2gIePtoZQ36jCdaDZvH8J6gYFfPtvKoSZ8ajtP5rVt5ahCHYsyneeEdhaV+anQdOjRhdANRNrx8I7U/mJmArgvFLzLXC90GxabqV+6xnp+FmC2TYDpkGN6xYJE+ziwHGC/dVikqoz3qeCLkfkxzqrgd41e/Gw99MFtlo0GjJcX2VQ9Cugx/gHRZR9v7H9BQQAAAABJRU5ErkJggg=="
+            alt="logout-rounded">
+          <span>Cerrar sesión</span>
         </a>
         <div class="cart">
           <img src="imagenes/icons8-carrito-de-compras-100.png" alt="Carrito">
@@ -195,16 +211,38 @@
 
       <div class="cart-actions">
         <button class="vaciar-carrito">🗑 Vaciar Carrito</button>
-        <button class="finalizar-compra">🛒 Finalizar Compra</button>
+        <a href="formulario_pago.html" class="finalizar-compra">🛒 Finalizar Compra</a>
       </div>
     </div>
   </div>
-
+  <div id="chatbot-perrito"> <!--CHATBOT-->
+    <div id="chatbot-header" onclick="toggleChatbot()">
+      <img src="https://img.icons8.com/?size=100&id=107434&format=png&color=000000" alt="Perrito animado"
+        class="chatbot-icon">
+      <span class="chatbot-title">¡Hola! ¿Necesitas ayuda?</span>
+      <button class="chatbot-close" onclick="closeChatbot()">✖</button>
+    </div>
+    <div id="chatbot-body" style="display: none;">
+      <div id="chatbot-content">
+        <p>Pregúntame sobre nuestros productos:</p>
+        <ul id="chatbot-questions">
+          <li onclick="showAnswer('perros')">Productos para perros</li>
+          <li onclick="showAnswer('gatos')">Productos para gatos</li>
+          <li onclick="showAnswer('roedores')">Productos para roedores</li>
+          <li onclick="showAnswer('aves')">Productos para aves</li>
+          <li onclick="showAnswer('peces')">Productos para peces</li>
+        </ul>
+        <p id="chatbot-answer" class="chatbot-response"></p>
+      </div>
+    </div>
+  </div>
   <script src="js/main.js"></script>
   <script src="js/nav.js"></script>
   <script src="js/carrusel.js"></script>
   <script src="js/carrito.js"></script>
-
+  <script src="js/cerrar_sesion.js"></script>
+  <script src="js/chatbot.js"></script>
+  <script src="js/busqueda.js"></script>
 </body>
 
 </html>
